@@ -1,0 +1,182 @@
+/* Styles pour /account/orders et /account/orders/[id] — importer dans
+   app/layout.tsx ou fusionner avec vos styles globaux. */
+
+.orders-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.orders-page h1 {
+  color: #1B2A4A;
+  font-size: 1.5rem;
+  margin: 0 0 24px;
+}
+
+.orders-empty {
+  text-align: center;
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 16px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 12px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.order-number {
+  font-weight: 700;
+  color: #1B2A4A;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.order-store {
+  font-size: 0.82rem;
+  opacity: 0.65;
+  margin: 2px 0 0;
+}
+
+.order-store a {
+  color: #1F7A5C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.order-total {
+  font-weight: 700;
+  color: #1B2A4A;
+}
+
+.order-date {
+  font-size: 0.82rem;
+  opacity: 0.6;
+}
+
+.order-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-pending { background: #F3ECDC; color: #1B2A4A; }
+.status-confirmed { background: #E8863A33; color: #C96A22; }
+.status-preparing { background: #E8863A33; color: #C96A22; }
+.status-shipping { background: #1F7A5C22; color: #1F7A5C; }
+.status-delivered { background: #1F7A5C33; color: #1F7A5C; }
+.status-completed { background: #1F7A5C; color: #F3ECDC; }
+.status-cancelled { background: #D6454522; color: #D64545; }
+
+.order-back {
+  margin: 0 0 12px;
+}
+
+.order-back a {
+  color: #1B2A4A;
+  opacity: 0.7;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.order-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.order-detail-header h1 {
+  margin: 0;
+}
+
+.order-timeline {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  font-size: 0.78rem;
+  color: rgba(27, 42, 74, 0.4);
+}
+
+.order-timeline li {
+  flex: 1;
+  text-align: center;
+  border-top: 3px solid rgba(27, 42, 74, 0.15);
+  padding-top: 8px;
+}
+
+.order-timeline li.done {
+  color: #1F7A5C;
+  border-top-color: #1F7A5C;
+  font-weight: 600;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.order-item-row {
+  display: grid;
+  grid-template-columns: 48px 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.order-item-row a {
+  color: #1B2A4A;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.order-summary-block {
+  background: #fff;
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+.order-meta {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin: 6px 0 0;
+}
+
+.order-history h2 {
+  font-size: 1rem;
+  color: #1B2A4A;
+}
+
+.order-history-row {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 4px 0;
+}

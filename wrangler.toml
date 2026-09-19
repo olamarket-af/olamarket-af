@@ -1,0 +1,26 @@
+name = "ola-market"
+main = ".open-next/worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# Variables d'environnement publiques nécessaires à Supabase.
+# Les valeurs réelles se définissent dans le dashboard Cloudflare
+# (Workers & Pages > votre projet > Settings > Variables) ou via
+# `wrangler secret put NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+[vars]
+NEXT_PUBLIC_SUPABASE_URL = "https://bzehimmrnbxyqqnoborz.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ6ZWhpbW1ybmJ4eXFxbm9ib3J6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk3MDU1OTgsImV4cCI6MjEwNTI4MTU5OH0.b9k5-N468WnbXQKDPIdD77VmMzDbP8dtOWr4V2Nkhjc"
+NEXT_PUBLIC_SITE_URL = "https://votre-projet.pages.dev"
+
+# Ne mets PAS ces clés ici en clair — ce sont de vrais secrets (accès total
+# à la base, ou capacité à créer des paiements). Utilise plutôt :
+#   npx wrangler pages secret put SUPABASE_SERVICE_ROLE_KEY
+#   npx wrangler pages secret put FEDAPAY_SECRET_KEY
+#   npx wrangler pages secret put FEDAPAY_WEBHOOK_SECRET
+# FEDAPAY_ENVIRONMENT ("sandbox" ou "live") peut en revanche rester ici :
+FEDAPAY_ENVIRONMENT = "sandbox"
+pages_build_output_dir = "./out"

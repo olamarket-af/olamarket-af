@@ -1,0 +1,131 @@
+/* Styles pour /account/messages, /seller/messages et leurs fils [id] */
+
+.conv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.conv-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.conv-row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.conv-name {
+  font-weight: 700;
+  color: var(--ink, #1B2A4A);
+  font-size: 0.92rem;
+}
+
+.conv-preview {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-thread {
+  background: #fff;
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  max-height: 640px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(27, 42, 74, 0.1);
+  font-weight: 700;
+  color: var(--ink, #1B2A4A);
+}
+
+.chat-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-header-actions button {
+  border: none;
+  background: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--red, #D64545);
+  cursor: pointer;
+  padding: 0;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  background: var(--paper-dim, #F3ECDC);
+  border-radius: 14px 14px 14px 4px;
+  padding: 8px 12px;
+  align-self: flex-start;
+}
+
+.chat-bubble.mine {
+  align-self: flex-end;
+  background: var(--amber, #E8863A);
+  color: var(--ink, #1B2A4A);
+  border-radius: 14px 14px 4px 14px;
+}
+
+.chat-bubble p {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chat-bubble-time {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.6;
+  margin-top: 3px;
+  text-align: right;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(27, 42, 74, 0.1);
+}
+
+.chat-input-row input {
+  flex: 1;
+  border: 1px solid rgba(27, 42, 74, 0.2);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}

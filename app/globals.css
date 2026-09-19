@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+/* ---------- Design tokens (mêmes couleurs que la page d'accueil publiée) ---------- */
+:root {
+  --ink: #1B2A4A;
+  --paper: #FBF6EC;
+  --paper-dim: #F3ECDC;
+  --amber: #E8863A;
+  --amber-deep: #C96A22;
+  --green: #1F7A5C;
+  --red: #D64545;
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  background: var(--amber);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--amber-deep);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: var(--red);
+  font-size: 0.88rem;
+  margin: -8px 0 0;
+}
+
+/* ---------- Site header / footer ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(27, 42, 74, 0.12);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-logo-mark {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(27, 42, 74, 0.12);
+  padding: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.install-banner {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 50;
+  background: #fff;
+  border: 1px solid rgba(27, 42, 74, 0.15);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 24px rgba(27, 42, 74, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.install-banner-text {
+  font-size: 0.88rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.install-banner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .site-nav {
+    gap: 12px;
+  }
+  .site-nav span {
+    display: none;
+  }
+}
+
+/* ---------- Pages ---------- */
+@import './home.css';
+@import './auth.css';
+@import './market/market.css';
+@import './cart/cart.css';
+@import './account/orders/orders.css';
+@import './seller/seller-area.css';
+@import './seller/seller.css';
+@import './admin/admin.css';
+@import '../components/notifications.css';
+@import '../components/messaging.css';
