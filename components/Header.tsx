@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { createClient, getCurrentProfile } from '@/lib/supabase/server'
+import SignOutButton from './SignOutButton'
 
 export default async function Header() {
   const profile = await getCurrentProfile()
@@ -62,11 +63,14 @@ export default async function Header() {
           </Link>
         )}
         {profile ? (
-          <Link href="/account/orders">
-            <span>Bonjour, </span>
-            {profile.full_name?.split(' ')[0] ?? 'Mon compte'}
-          </Link>
-        ) : (
+          <>
+            <Link href="/account/orders">
+              <span>Bonjour, </span>
+              {profile.full_name?.split(' ')[0] ?? 'Mon compte'}
+            </Link>
+            <SignOutButton />
+          </>
+        ) : (        ) : (
           <>
             <Link href="/login">Se connecter</Link>
             <Link href="/register" className="btn-primary">Créer un compte</Link>
