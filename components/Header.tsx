@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { createClient, getCurrentProfile } from '@/lib/supabase/server'
-import SignOutButton from './SignOutButton'
+
 
 export default async function Header() {
   const profile = await getCurrentProfile()
@@ -68,7 +68,7 @@ export default async function Header() {
               <span>Bonjour, </span>
               {profile.full_name?.split(' ')[0] ?? 'Mon compte'}
             </Link>
-            <SignOutButton />
+            <button className="text-sm font-medium text-gray-700 hover:text-gray-900">
           </>
         ) : (
           <>
