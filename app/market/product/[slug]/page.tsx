@@ -91,7 +91,7 @@ export default async function ProductPage({
     ),
   ]
 
-  const reviews = (product.reviews as unknown as{
+  const reviews = (product.reviews as unknown as {
     | { rating: number; comment: string | null; created_at: string; profiles: { full_name: string | null } | null }[]
     | null) ?? []
   const averageRating = reviews.length
