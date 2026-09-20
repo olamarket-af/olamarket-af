@@ -166,3 +166,4 @@ données structurées Product/Organization/Breadcrumb), messagerie client ↔
 vendeur en temps réel (blocage, signalement), paiements réels via FedaPay
 (abonnements vendeurs + publicité, supervision admin des publicités et des
 paiements).
+
