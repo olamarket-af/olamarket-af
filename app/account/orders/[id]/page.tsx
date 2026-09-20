@@ -41,7 +41,7 @@ export default async function OrderDetailPage({
 
   // @ts-expect-error -- relation renvoyée comme objet unique
   const store = order.store as { name: string; slug: string; phone: string | null; whatsapp: string | null }
-  const items = (order.order_items as {
+  const items = (order.order_items as unknown as {
     id: string
     quantity: number
     unit_price: number

@@ -31,7 +31,7 @@ export default async function SellerOrderDetailPage({
 
   if (!order) notFound()
 
-  const items = (order.order_items as {
+  const items = (order.order_items as unknown as {
     id: string
     quantity: number
     unit_price: number
