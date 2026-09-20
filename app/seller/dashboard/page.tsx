@@ -50,8 +50,6 @@ export default async function SellerDashboardPage() {
     .eq('seller_id', user.id)
     .order('created_at', { ascending: false })
     .limit(5)
-
-  // @ts-expect-error -- relation renvoyée comme objet unique
   const plan = subscription?.plan as { name: string; max_products: number | null } | undefined
 
   return (
