@@ -37,7 +37,7 @@ export default async function Header() {
     }
   }
 
-  const notificationsHref = profile?.role === 'vendeur' ? '/seller/notifications' : '/account/notifications'
+  const notificationsHref = profile?.role === 'vendeur' ? '/seller/notifications' : '/account/notifications';'
   const messagesHref = profile?.role === 'vendeur' ? '/seller/messages' : '/account/messages'
 
   return (
