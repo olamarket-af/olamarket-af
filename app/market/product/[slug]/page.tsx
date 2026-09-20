@@ -92,9 +92,7 @@ export default async function ProductPage({
   ]
 
   const reviews = (product.reviews as any[]) ?? []
-    | { rating: number; comment: string | null; created_at: string; profiles: { full_name: string | null } | null }[]
-    | null) ?? []
-  const averageRating = reviews.length
+      const averageRating = reviews.length
     ? (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1)
     : null
 
