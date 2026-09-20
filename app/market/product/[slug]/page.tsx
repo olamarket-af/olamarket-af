@@ -86,12 +86,12 @@ export default async function ProductPage({
 
   const images = [
     ...(product.image_url ? [{ image_url: product.image_url, position: -1 }] : []),
-    ...((product.product_images as unknown as image_url: string; position: number }[]) ?? []).sort(
+    ...((product.product_images as unknown as { image_url: string; position: number }[]) ?? []).sort(
       (a, b) => a.position - b.position
     ),
   ]
 
-  const reviews = (product.reviews as unknown as
+  const reviews = (product.reviews as unknown as{
     | { rating: number; comment: string | null; created_at: string; profiles: { full_name: string | null } | null }[]
     | null) ?? []
   const averageRating = reviews.length
