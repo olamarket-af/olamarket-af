@@ -8,11 +8,9 @@ const nextConfig = {
       },
     ],
   },
-  // AJOUTEZ CES LIGNES ICI, À L'INTÉRIEUR DE L'OBJET :
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Fin de l'ajout
 };
 
 export default nextConfig;
