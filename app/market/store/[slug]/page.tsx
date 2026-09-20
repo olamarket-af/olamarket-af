@@ -117,7 +117,6 @@ export default async function StorePage({
               {products.map((product) => (
                 <ProductCard
                   key={product.id}
-                  // @ts-expect-error -- pas de relation store nécessaire ici
                   product={{ ...product, store: { name: store.name, slug: store.slug } }}
                 />
               ))}
