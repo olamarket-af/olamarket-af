@@ -70,7 +70,7 @@ export default async function Header() {
             </Link>
             <SignOutButton />
           </>
-        ) : (        ) : (
+        ) : (
           <>
             <Link href="/login">Se connecter</Link>
             <Link href="/register" className="btn-primary">Créer un compte</Link>
