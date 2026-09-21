@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import { createClient } from '@/lib/supabase/server'
-
+import Link from 'next/link'
+import { createClient, getCurrentProfile } from '@/lib/supabase/server'
+import SignOutButton from './SignOutButton'
 export default async function Header() {
   let user = null
   let profile = null
